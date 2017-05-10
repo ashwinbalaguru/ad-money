@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resource :home, only: [:show]
 
   root to: "home#show"
+
+  post 'new_registrant'=> "home#register_new_user", :as => "registering_new_user"
 end

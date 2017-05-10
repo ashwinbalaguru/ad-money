@@ -1,2 +1,49 @@
-<h1>Home</h1>
-<p></p>
+<div class="master" id="sign_up" >
+	<%= form_for :new_registrant, :html => {:id => "register_user"}, :url => registering_new_user_path do |f| %>
+		<table>
+		    <tbody>
+		      <tr>
+			<td class="c1"></td>
+			<td class="c2"><span class="label"><b><u>Sign Up </u></b></span></td>
+			<td></td>
+			<td class="c3"></td>
+			<td></td>
+		      </tr>
+		      <tr>
+			<td class="c1"></td>
+			<td class="c2"><span class="label-required">First Name:</span></td>
+			<td><%=f.text_field :first_name, {:placeholder => "John", :style => "width:300px;", :class => 'label-input'} %></td>
+			<td class="c3"></td>
+			<td class="c2"></td>
+		     </tr>
+		     <tr>
+			<td class="c1"></td>
+			<td class="c2"><span class="label-required">Last Name:</span></td>
+			<td><%=f.text_field :last_name, {:placeholder => "smith", :style => "width:300px;", :class => 'label-input'} %></td>
+			<td class="c3"></td>
+			<td class="c2"></td>
+		     </tr>
+		     <tr>
+			<td class="c1"></td>
+			<td class="c2"><span class="label-required">Email:</span></td>
+			<td><%=f.text_field :email, {:placeholder => "John_smith@xyz.com", :style => "width:300px;", :class => 'label-input'} %></td>
+			<td class="c3"></td>
+			<td class="c2"></td>
+		     </tr>
+		     <tr>
+			<td class="c1"></td>
+			<td class="c2"><span class="label-required">Mobile Number:</span></td>
+			<td><%=f.text_field :mobile_number, {:placeholder => "+91 9876543210", :style => "width:300px;", :class => 'label-input'} %></td>
+			<td class="c3"></td>
+			<td class="c2"></td>
+		     </tr>
+		     <tr>
+			<td class="c1"></td>
+			<td class="c2"><%= f.submit "Sign Up",:data => {:disable_with => "Sigining Up"}%></td>
+			<td class="c3"></td>
+			<td class="c2"></td>
+		     </tr>
+		    </tbody>
+		</table>
+	<% end %>
+</div>
